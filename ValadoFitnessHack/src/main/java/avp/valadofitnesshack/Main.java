@@ -7,9 +7,12 @@ package avp.valadofitnesshack;
 import avp.valadofitnesshack.dialogs.LoginDialog;
 import avp.valadofitnesshack.dataaccess.DataAccess;
 import avp.valadofitnesshack.dto.Usuari;
+import com.formdev.flatlaf.FlatDarculaLaf;
+import java.awt.Insets;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 /**
  *
@@ -24,6 +27,28 @@ public class Main extends javax.swing.JFrame {
      * Creates new form Main
      */
     public Main() {
+
+        try {
+            UIManager.setLookAndFeel(new FlatDarculaLaf());
+        } catch (Exception ex) {
+            System.err.println("Failed to initialize LaF");
+        }
+        
+        //LOOK AND FEEL: COMPONENT
+        UIManager.put( "Component.arc", 999 );
+        UIManager.put( "Component.arrowType", "triangle" );
+        UIManager.put( "Component.focusWidth", 2 );
+        UIManager.put( "Component.hideMnemonics", false );
+        
+        
+        //BUTTON
+        UIManager.put( "Button.arc", 999 );
+        
+        //SCROLLBAR
+        UIManager.put( "ScrollBar.showButtons", true );
+        UIManager.put( "ScrollBar.thumbArc", 999 );
+        UIManager.put( "ScrollBar.thumbInsets", new Insets( 2, 2, 2, 2 ) );
+        
         initComponents();
         setSize(500, 500);
         setLocationRelativeTo(null);
