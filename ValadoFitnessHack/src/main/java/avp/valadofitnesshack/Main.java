@@ -8,6 +8,7 @@ import avp.valadofitnesshack.dialogs.LoginDialog;
 import avp.valadofitnesshack.dataaccess.DataAccess;
 import avp.valadofitnesshack.dto.Usuari;
 import com.formdev.flatlaf.FlatDarculaLaf;
+import java.awt.Font;
 import java.awt.Insets;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
@@ -33,25 +34,39 @@ public class Main extends javax.swing.JFrame {
         } catch (Exception ex) {
             System.err.println("Failed to initialize LaF");
         }
-        
+
         //LOOK AND FEEL: COMPONENT
-        UIManager.put( "Component.arc", 999 );
-        UIManager.put( "Component.arrowType", "triangle" );
-        UIManager.put( "Component.focusWidth", 2 );
-        UIManager.put( "Component.hideMnemonics", false );
-        
-        
+        UIManager.put("Component.arc", 999);
+        UIManager.put("Component.arrowType", "triangle");
+        UIManager.put("Component.focusWidth", 2);
+        UIManager.put("Component.hideMnemonics", false);
+
         //BUTTON
-        UIManager.put( "Button.arc", 999 );
-        
+        UIManager.put("Button.arc", 999);
+
         //SCROLLBAR
-        UIManager.put( "ScrollBar.showButtons", true );
-        UIManager.put( "ScrollBar.thumbArc", 999 );
-        UIManager.put( "ScrollBar.thumbInsets", new Insets( 2, 2, 2, 2 ) );
-        
-        initComponents();
-        setSize(500, 500);
-        setLocationRelativeTo(null);
+        UIManager.put("ScrollBar.showButtons", true);
+        UIManager.put("ScrollBar.thumbArc", 999);
+        UIManager.put("ScrollBar.thumbInsets", new Insets(2, 2, 2, 2));
+
+        Font smallFont = CustomFontLoader.loadCustomFont("src\\main\\java\\avp\\valadofitnesshack\\resources\\fonts\\Quitars.ttf", 18F);
+        Font mediumFont = CustomFontLoader.loadCustomFont("src\\main\\java\\avp\\valadofitnesshack\\resources\\fonts\\Quitars.ttf", 20F);
+        Font largeFont = CustomFontLoader.loadCustomFont("src\\main\\java\\avp\\valadofitnesshack\\resources\\fonts\\Quitars.ttf", 24F);
+
+        if (smallFont != null && mediumFont != null && largeFont != null) {
+            UIManager.put("Label.font", largeFont);
+            UIManager.put("Button.font", mediumFont);
+
+            initComponents();
+            setSize(500, 500);
+            setLocationRelativeTo(null);
+            btnLogin.setFont(mediumFont);
+            
+            mnuFile.setFont(smallFont);
+            mnuHelp.setFont(smallFont);
+            itmAbout.setFont(smallFont);
+            itmExit.setFont(smallFont);
+        }
 
     }
 
@@ -69,9 +84,9 @@ public class Main extends javax.swing.JFrame {
         lblLogin = new javax.swing.JLabel();
         lblLogo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        mnuFile = new javax.swing.JMenu();
         itmExit = new javax.swing.JMenuItem();
-        Help = new javax.swing.JMenu();
+        mnuHelp = new javax.swing.JMenu();
         itmAbout = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -92,7 +107,7 @@ public class Main extends javax.swing.JFrame {
         jPanel1.add(lblLogo);
         lblLogo.setBounds(140, 80, 240, 240);
 
-        jMenu1.setText("File");
+        mnuFile.setText("File");
 
         itmExit.setText("Exit");
         itmExit.addActionListener(new java.awt.event.ActionListener() {
@@ -100,11 +115,11 @@ public class Main extends javax.swing.JFrame {
                 itmExitActionPerformed(evt);
             }
         });
-        jMenu1.add(itmExit);
+        mnuFile.add(itmExit);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(mnuFile);
 
-        Help.setText("Edit");
+        mnuHelp.setText("Help");
 
         itmAbout.setText("About");
         itmAbout.addActionListener(new java.awt.event.ActionListener() {
@@ -112,9 +127,10 @@ public class Main extends javax.swing.JFrame {
                 itmAboutActionPerformed(evt);
             }
         });
-        Help.add(itmAbout);
+        mnuHelp.add(itmAbout);
 
-        jMenuBar1.add(Help);
+        jMenuBar1.add(mnuHelp);
+        mnuHelp.getAccessibleContext().setAccessibleDescription("");
 
         setJMenuBar(jMenuBar1);
 
@@ -199,14 +215,14 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu Help;
     private javax.swing.JButton btnLogin;
     private javax.swing.JMenuItem itmAbout;
     private javax.swing.JMenuItem itmExit;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblLogo;
+    private javax.swing.JMenu mnuFile;
+    private javax.swing.JMenu mnuHelp;
     // End of variables declaration//GEN-END:variables
 }

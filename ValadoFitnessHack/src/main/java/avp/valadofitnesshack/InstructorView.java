@@ -148,7 +148,7 @@ public class InstructorView extends javax.swing.JFrame {
         pnlVideoPlayer.setBorder(javax.swing.BorderFactory.createTitledBorder("Video"));
         pnlVideoPlayer.setLayout(new java.awt.BorderLayout());
         getContentPane().add(pnlVideoPlayer);
-        pnlVideoPlayer.setBounds(14, 0, 680, 270);
+        pnlVideoPlayer.setBounds(14, 0, 680, 390);
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Info"));
 
@@ -158,7 +158,7 @@ public class InstructorView extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(txtInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 657, Short.MAX_VALUE)
+                .addComponent(txtInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 908, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -169,7 +169,7 @@ public class InstructorView extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel4);
-        jPanel4.setBounds(10, 420, 679, 60);
+        jPanel4.setBounds(10, 530, 930, 60);
 
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
@@ -178,7 +178,7 @@ public class InstructorView extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnLogOut);
-        btnLogOut.setBounds(553, 493, 130, 70);
+        btnLogOut.setBounds(350, 460, 100, 50);
 
         btnReview.setText("Review");
         btnReview.addActionListener(new java.awt.event.ActionListener() {
@@ -187,7 +187,7 @@ public class InstructorView extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnReview);
-        btnReview.setBounds(140, 490, 72, 23);
+        btnReview.setBounds(700, 150, 90, 23);
 
         btnEditReview.setText("Edit");
         btnEditReview.addActionListener(new java.awt.event.ActionListener() {
@@ -196,7 +196,7 @@ public class InstructorView extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnEditReview);
-        btnEditReview.setBounds(220, 490, 72, 23);
+        btnEditReview.setBounds(700, 120, 90, 23);
 
         btnDeleteReview.setText("Delete");
         btnDeleteReview.addActionListener(new java.awt.event.ActionListener() {
@@ -205,9 +205,9 @@ public class InstructorView extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnDeleteReview);
-        btnDeleteReview.setBounds(300, 490, 72, 23);
+        btnDeleteReview.setBounds(700, 180, 90, 23);
         getContentPane().add(pnlPendingReviewsUsers);
-        pnlPendingReviewsUsers.setBounds(220, 290, 290, 130);
+        pnlPendingReviewsUsers.setBounds(460, 400, 470, 130);
 
         btnGetAttemptsPendingReview.setText("Get Attempts Pending Review");
         btnGetAttemptsPendingReview.addActionListener(new java.awt.event.ActionListener() {
@@ -216,7 +216,7 @@ public class InstructorView extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnGetAttemptsPendingReview);
-        btnGetAttemptsPendingReview.setBounds(20, 300, 187, 23);
+        btnGetAttemptsPendingReview.setBounds(260, 430, 187, 23);
 
         btnGetUsers.setText("Get Users");
         btnGetUsers.addActionListener(new java.awt.event.ActionListener() {
@@ -225,11 +225,11 @@ public class InstructorView extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnGetUsers);
-        btnGetUsers.setBounds(20, 330, 190, 23);
+        btnGetUsers.setBounds(260, 400, 190, 23);
 
         jTextField1.setText("txtVideosPath");
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(20, 550, 140, 22);
+        jTextField1.setBounds(700, 90, 140, 22);
 
         btnPauseResumeVideo.setText("Pause/Resume");
         btnPauseResumeVideo.addActionListener(new java.awt.event.ActionListener() {
@@ -238,7 +238,7 @@ public class InstructorView extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnPauseResumeVideo);
-        btnPauseResumeVideo.setBounds(20, 520, 120, 23);
+        btnPauseResumeVideo.setBounds(700, 50, 230, 23);
 
         btnLoadFile.setText("Load Video");
         btnLoadFile.addActionListener(new java.awt.event.ActionListener() {
@@ -247,11 +247,11 @@ public class InstructorView extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnLoadFile);
-        btnLoadFile.setBounds(20, 490, 110, 23);
+        btnLoadFile.setBounds(700, 20, 230, 23);
 
         pnlAttemptsPerUser.setBorder(javax.swing.BorderFactory.createTitledBorder("Attempts Per User"));
         getContentPane().add(pnlAttemptsPerUser);
-        pnlAttemptsPerUser.setBounds(520, 290, 170, 130);
+        pnlAttemptsPerUser.setBounds(690, 270, 240, 130);
 
         jMenu1.setText("File");
 
