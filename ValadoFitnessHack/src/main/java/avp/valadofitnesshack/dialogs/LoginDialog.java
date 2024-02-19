@@ -58,6 +58,7 @@ public class LoginDialog extends javax.swing.JDialog {
 
         txtLoginContrassenya.setText("string");
 
+        btnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/address-card.png"))); // NOI18N
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

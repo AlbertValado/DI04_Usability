@@ -81,7 +81,6 @@ public class Main extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         btnLogin = new javax.swing.JButton();
-        lblLogin = new javax.swing.JLabel();
         lblLogo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuFile = new javax.swing.JMenu();
@@ -94,6 +93,7 @@ public class Main extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
+        btnLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/address-card.png"))); // NOI18N
         btnLogin.setText("Login");
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,11 +101,11 @@ public class Main extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnLogin);
-        btnLogin.setBounds(210, 180, 72, 23);
-        jPanel1.add(lblLogin);
-        lblLogin.setBounds(210, 330, 30, 30);
+        btnLogin.setBounds(210, 290, 110, 50);
+
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
         jPanel1.add(lblLogo);
-        lblLogo.setBounds(140, 80, 240, 240);
+        lblLogo.setBounds(140, 20, 260, 250);
 
         mnuFile.setText("File");
 
@@ -220,7 +220,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JMenuItem itmExit;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JMenu mnuFile;
     private javax.swing.JMenu mnuHelp;

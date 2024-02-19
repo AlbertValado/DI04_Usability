@@ -12,6 +12,9 @@ Se ha añadido botones a las barras de scroll y se les ha dado el mismo aspecto 
 Se ha redistribuido la ubicación de los distintos elementos dentro de la aplicación. 
 
 --- Fonts ---
-Se ha añadido a la carpeta resources, una nueva carpeta Fonts. Hemos descargado desde https://www.dafont.com/es/quitars.font, la fuente Quitars, con uso personal. Es una fuente con un look moderno, pero con buena legibilidad. 
+Se ha añadido la carpeta resources a valadofitnesshack, y una nueva carpeta llamada Fonts. Hemos descargado desde https://www.dafont.com/es/quitars.font, la fuente Quitars, con uso personal. Es una fuente con un look moderno, pero con buena legibilidad. 
 
 Hemos creado una nueva clase, CustomFontLoader, para cargar esta fuente desde el archivo y registrarla en el GraphicsEnvironment. Desde el main, llamamos al método pasando como parámetro el tamaño de la fuente para crear tres fuentes custom distintas, una pequeña, una mediana y una grande. 
+
+--- Icons ---
+Finalmente, después de hacer un poco de troubleshooting para que los reconociera, se han ubicado las carpetas Icons y Images, dentro de Resources y ésta, dentro de main. Se ha modificado el pom para que la reconozca como carpeta de recursos al hacer el build. Se han añadido los iconos desde las properties del Designer. 
