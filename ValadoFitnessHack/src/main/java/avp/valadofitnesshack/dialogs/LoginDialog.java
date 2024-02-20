@@ -52,7 +52,7 @@ public class LoginDialog extends javax.swing.JDialog {
 
         lblLoginEmail.setText("Email:");
 
-        lblLoginContrassenya.setText("Contrassenya:");
+        lblLoginContrassenya.setText("Password:");
 
         txtLoginEmail.setText("a@b.c");
 
@@ -85,7 +85,7 @@ public class LoginDialog extends javax.swing.JDialog {
                             .addComponent(txtLoginEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                             .addComponent(txtLoginContrassenya)))
                     .addComponent(btnLogin))
-                .addContainerGap(212, Short.MAX_VALUE))
+                .addContainerGap(233, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

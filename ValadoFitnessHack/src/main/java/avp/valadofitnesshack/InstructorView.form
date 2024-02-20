@@ -118,6 +118,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnLogOut">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/icons/exit-alt.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Log Out"/>
       </Properties>
       <Events>
@@ -131,7 +134,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnReview">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/icons/feedback-hand.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Review"/>
+        <Property name="toolTipText" type="java.lang.String" value="Creates a new review for the selected attempt."/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReviewActionPerformed"/>
@@ -144,7 +151,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnEditReview">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/icons/edit.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Edit"/>
+        <Property name="toolTipText" type="java.lang.String" value="Allows to edit the selected attempt&apos;s review."/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEditReviewActionPerformed"/>
@@ -157,7 +168,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnDeleteReview">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/icons/trash.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Delete"/>
+        <Property name="toolTipText" type="java.lang.String" value="Deletes the selected attempt&apos;s review."/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteReviewActionPerformed"/>
@@ -179,7 +194,11 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnGetAttemptsPendingReview">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/icons/duration-alt.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Get Attempts Pending Review"/>
+        <Property name="toolTipText" type="java.lang.String" value="Gets all the attempts that are currently pending a review."/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGetAttemptsPendingReviewActionPerformed"/>
@@ -192,7 +211,11 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnGetUsers">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/icons/users-alt.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Get Users"/>
+        <Property name="toolTipText" type="java.lang.String" value="Displays all the current users."/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGetUsersActionPerformed"/>
@@ -228,6 +251,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnLoadFile">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/icons/refresh.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Load Video"/>
       </Properties>
       <Events>

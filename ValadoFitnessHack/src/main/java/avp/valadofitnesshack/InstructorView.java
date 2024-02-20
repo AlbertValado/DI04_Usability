@@ -18,6 +18,7 @@ import java.awt.BorderLayout;
 import java.io.File;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import uk.co.caprica.vlcj.player.component.EmbeddedMediaPlayerComponent;
@@ -171,6 +172,7 @@ public class InstructorView extends javax.swing.JFrame {
         getContentPane().add(jPanel4);
         jPanel4.setBounds(10, 530, 930, 60);
 
+        btnLogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/exit-alt.png"))); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -180,7 +182,9 @@ public class InstructorView extends javax.swing.JFrame {
         getContentPane().add(btnLogOut);
         btnLogOut.setBounds(350, 460, 100, 50);
 
+        btnReview.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/feedback-hand.png"))); // NOI18N
         btnReview.setText("Review");
+        btnReview.setToolTipText("Creates a new review for the selected attempt.");
         btnReview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnReviewActionPerformed(evt);
@@ -189,7 +193,9 @@ public class InstructorView extends javax.swing.JFrame {
         getContentPane().add(btnReview);
         btnReview.setBounds(700, 150, 90, 23);
 
+        btnEditReview.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit.png"))); // NOI18N
         btnEditReview.setText("Edit");
+        btnEditReview.setToolTipText("Allows to edit the selected attempt's review.");
         btnEditReview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditReviewActionPerformed(evt);
@@ -198,7 +204,9 @@ public class InstructorView extends javax.swing.JFrame {
         getContentPane().add(btnEditReview);
         btnEditReview.setBounds(700, 120, 90, 23);
 
+        btnDeleteReview.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/trash.png"))); // NOI18N
         btnDeleteReview.setText("Delete");
+        btnDeleteReview.setToolTipText("Deletes the selected attempt's review.");
         btnDeleteReview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteReviewActionPerformed(evt);
@@ -209,16 +217,20 @@ public class InstructorView extends javax.swing.JFrame {
         getContentPane().add(pnlPendingReviewsUsers);
         pnlPendingReviewsUsers.setBounds(460, 400, 470, 130);
 
+        btnGetAttemptsPendingReview.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/duration-alt.png"))); // NOI18N
         btnGetAttemptsPendingReview.setText("Get Attempts Pending Review");
+        btnGetAttemptsPendingReview.setToolTipText("Gets all the attempts that are currently pending a review.");
         btnGetAttemptsPendingReview.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGetAttemptsPendingReviewActionPerformed(evt);
             }
         });
         getContentPane().add(btnGetAttemptsPendingReview);
-        btnGetAttemptsPendingReview.setBounds(260, 430, 187, 23);
+        btnGetAttemptsPendingReview.setBounds(260, 430, 207, 23);
 
+        btnGetUsers.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/users-alt.png"))); // NOI18N
         btnGetUsers.setText("Get Users");
+        btnGetUsers.setToolTipText("Displays all the current users.");
         btnGetUsers.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGetUsersActionPerformed(evt);
@@ -240,6 +252,7 @@ public class InstructorView extends javax.swing.JFrame {
         getContentPane().add(btnPauseResumeVideo);
         btnPauseResumeVideo.setBounds(700, 50, 230, 23);
 
+        btnLoadFile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/refresh.png"))); // NOI18N
         btnLoadFile.setText("Load Video");
         btnLoadFile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -346,10 +359,12 @@ public class InstructorView extends javax.swing.JFrame {
             mediaPlayer.mediaPlayer().controls().pause();
             isPlaying = false;
             btnPauseResumeVideo.setText("Resume");
+            btnPauseResumeVideo.setIcon(new ImageIcon(getClass().getResource("/icons/play.png")));
         } else {
             mediaPlayer.mediaPlayer().controls().start();
             isPlaying = true;
             btnPauseResumeVideo.setText("Pause");
+            btnPauseResumeVideo.setIcon(new ImageIcon(getClass().getResource("/icons/pause.png")));
         }
     }//GEN-LAST:event_btnPauseResumeVideoActionPerformed
 
@@ -429,6 +444,7 @@ public class InstructorView extends javax.swing.JFrame {
         mediaPlayer.mediaPlayer().media().play(downloadPath);
         isPlaying = true;
         btnPauseResumeVideo.setText("Pause");
+        btnPauseResumeVideo.setIcon(new ImageIcon(getClass().getResource("/icons/pause.png")));
 
     }
 
@@ -462,6 +478,7 @@ public class InstructorView extends javax.swing.JFrame {
         mediaPlayer.mediaPlayer().media().play(videoLocation);
         isPlaying = true;
         btnPauseResumeVideo.setText("Pause");
+        btnPauseResumeVideo.setIcon(new ImageIcon(getClass().getResource("/icons/pause.png")));
     }
 
     //Método de prueba mientras probaba el funcionamiento del vlc
