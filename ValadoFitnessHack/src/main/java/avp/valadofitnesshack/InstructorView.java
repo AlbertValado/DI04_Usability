@@ -46,8 +46,8 @@ public class InstructorView extends javax.swing.JFrame {
 
     private String userName = System.getProperty("user.home");
     
-    private String connectStr = "DefaultEndpointsProtocol=https;AccountName=valadovideoserver;AccountKey=dxk5mJBL6Aiqs6jf/E8kC697v4uTToJRLD1I7vDbxVVjY/1eTsv/7RaMQRiHedgscU8PVS6oszsB+AStIBnSuQ==;EndpointSuffix=core.windows.net";
-    private String containerName = "valadovideos";
+    private String connectStr = "DefaultEndpointsProtocol=https;AccountName=simulapfileserver;AccountKey=rARWVR8b+HYR9t3Clc7SSYSKg3ziOhmItZUUdNMqSbV70r8xHhXYDw17dtNF13Ftujtj7UOZBRH5+AStTP81ig==;EndpointSuffix=core.windows.net";
+    private String containerName = "simulapvideoscontainer";
     private String tempDir = System.getProperty("java.io.tmpdir");
 
     /**
@@ -55,7 +55,7 @@ public class InstructorView extends javax.swing.JFrame {
      */
     public InstructorView() {
         initComponents();
-        setSize(720, 630);
+        setSize(950, 630);
         setLocationRelativeTo(null);
 
         lstAttemptsPendingReview = new javax.swing.JList<>();
@@ -122,6 +122,7 @@ public class InstructorView extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         pnlVideoPlayer = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -144,12 +145,19 @@ public class InstructorView extends javax.swing.JFrame {
         itmAbout = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
 
         pnlVideoPlayer.setBorder(javax.swing.BorderFactory.createTitledBorder("Video"));
-        pnlVideoPlayer.setLayout(new java.awt.BorderLayout());
-        getContentPane().add(pnlVideoPlayer);
-        pnlVideoPlayer.setBounds(14, 0, 680, 390);
+
+        javax.swing.GroupLayout pnlVideoPlayerLayout = new javax.swing.GroupLayout(pnlVideoPlayer);
+        pnlVideoPlayer.setLayout(pnlVideoPlayerLayout);
+        pnlVideoPlayerLayout.setHorizontalGroup(
+            pnlVideoPlayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 670, Short.MAX_VALUE)
+        );
+        pnlVideoPlayerLayout.setVerticalGroup(
+            pnlVideoPlayerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 367, Short.MAX_VALUE)
+        );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Info"));
 
@@ -169,9 +177,6 @@ public class InstructorView extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel4);
-        jPanel4.setBounds(10, 530, 930, 60);
-
         btnLogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/exit-alt.png"))); // NOI18N
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
@@ -179,8 +184,6 @@ public class InstructorView extends javax.swing.JFrame {
                 btnLogOutActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLogOut);
-        btnLogOut.setBounds(350, 460, 100, 50);
 
         btnReview.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/feedback-hand.png"))); // NOI18N
         btnReview.setText("Review");
@@ -190,8 +193,6 @@ public class InstructorView extends javax.swing.JFrame {
                 btnReviewActionPerformed(evt);
             }
         });
-        getContentPane().add(btnReview);
-        btnReview.setBounds(700, 150, 90, 23);
 
         btnEditReview.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/edit.png"))); // NOI18N
         btnEditReview.setText("Edit");
@@ -201,8 +202,6 @@ public class InstructorView extends javax.swing.JFrame {
                 btnEditReviewActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEditReview);
-        btnEditReview.setBounds(700, 120, 90, 23);
 
         btnDeleteReview.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/trash.png"))); // NOI18N
         btnDeleteReview.setText("Delete");
@@ -212,10 +211,6 @@ public class InstructorView extends javax.swing.JFrame {
                 btnDeleteReviewActionPerformed(evt);
             }
         });
-        getContentPane().add(btnDeleteReview);
-        btnDeleteReview.setBounds(700, 180, 90, 23);
-        getContentPane().add(pnlPendingReviewsUsers);
-        pnlPendingReviewsUsers.setBounds(460, 400, 470, 130);
 
         btnGetAttemptsPendingReview.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/duration-alt.png"))); // NOI18N
         btnGetAttemptsPendingReview.setText("Get Attempts Pending Review");
@@ -225,8 +220,6 @@ public class InstructorView extends javax.swing.JFrame {
                 btnGetAttemptsPendingReviewActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGetAttemptsPendingReview);
-        btnGetAttemptsPendingReview.setBounds(260, 430, 207, 23);
 
         btnGetUsers.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/users-alt.png"))); // NOI18N
         btnGetUsers.setText("Get Users");
@@ -236,12 +229,8 @@ public class InstructorView extends javax.swing.JFrame {
                 btnGetUsersActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGetUsers);
-        btnGetUsers.setBounds(260, 400, 190, 23);
 
         jTextField1.setText("txtVideosPath");
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(700, 90, 140, 22);
 
         btnPauseResumeVideo.setText("Pause/Resume");
         btnPauseResumeVideo.addActionListener(new java.awt.event.ActionListener() {
@@ -249,8 +238,6 @@ public class InstructorView extends javax.swing.JFrame {
                 btnPauseResumeVideoActionPerformed(evt);
             }
         });
-        getContentPane().add(btnPauseResumeVideo);
-        btnPauseResumeVideo.setBounds(700, 50, 230, 23);
 
         btnLoadFile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/refresh.png"))); // NOI18N
         btnLoadFile.setText("Load Video");
@@ -259,12 +246,8 @@ public class InstructorView extends javax.swing.JFrame {
                 btnLoadFileActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLoadFile);
-        btnLoadFile.setBounds(700, 20, 230, 23);
 
         pnlAttemptsPerUser.setBorder(javax.swing.BorderFactory.createTitledBorder("Attempts Per User"));
-        getContentPane().add(pnlAttemptsPerUser);
-        pnlAttemptsPerUser.setBounds(690, 270, 240, 130);
 
         jMenu1.setText("File");
 
@@ -291,6 +274,82 @@ public class InstructorView extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(pnlVideoPlayer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(pnlAttemptsPerUser, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnReview, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnEditReview, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnDeleteReview, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnPauseResumeVideo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(2, 2, 2)))
+                        .addGap(6, 6, 6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(btnGetUsers, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnGetAttemptsPendingReview, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE))
+                            .addComponent(btnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(70, 70, 70)
+                        .addComponent(pnlPendingReviewsUsers, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(686, 686, 686)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jTextField1)
+                                .addGap(98, 98, 98))
+                            .addComponent(btnLoadFile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(8, 8, 8))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(btnLoadFile)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnPauseResumeVideo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEditReview)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnReview)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnDeleteReview)
+                        .addGap(33, 33, 33)
+                        .addComponent(pnlAttemptsPerUser, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pnlVideoPlayer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnGetUsers)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnGetAttemptsPendingReview)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(pnlPendingReviewsUsers, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

@@ -26,11 +26,12 @@ public class DataAccess {
         try {
             //properties.load(DataAccess.class.getClassLoader().getResourceAsStream("properties/application.properties"));
             //connection = DriverManager.getConnection(properties.getProperty("connectionUrl"));
-            String connectionUrl = "jdbc:sqlserver://localhost:1433;database=simulapdb;user=sa;password=sunset1234;encrypt=false;loginTimeout=10;";
+            //String connectionUrl = "jdbc:sqlserver://localhost:1433;database=simulapdb;user=sa;password=sunset1234;encrypt=false;loginTimeout=10;";
             String connectionUrlAzure = "jdbc:sqlserver://simulapsqlserver.database.windows.net:1433;database=simulapdb;user=simulapdbadmin@simulapsqlserver;password=Pwd1234.;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
 
-            connection = DriverManager.getConnection(connectionUrl);
-            //connection = DriverManager.getConnection(connectionUrlAzure);
+
+            //connection = DriverManager.getConnection(connectionUrl);
+            connection = DriverManager.getConnection(connectionUrlAzure);
 
         } catch (Exception e) {
             e.printStackTrace();
