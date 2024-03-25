@@ -24,7 +24,7 @@ import javax.swing.JOptionPane;
 import uk.co.caprica.vlcj.player.component.EmbeddedMediaPlayerComponent;
 
 /**
- *
+ * Clase principal del programa, desde donde se realizan la mayoría de funciones
  * @author Albert
  */
 public class InstructorView extends javax.swing.JFrame {
@@ -354,14 +354,20 @@ public class InstructorView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Botón para salir de la sesión
+     * @param evt 
+     */
     private void btnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogOutActionPerformed
         Main main = new Main();
         main.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnLogOutActionPerformed
 
-    //Los dos métodos siguientes permiten obtener una lista que se muestra en el mismo panel
-    //O bien, una de intentos pendientes de revisión o una de usuarios
+    /**
+     * Permite obtener una lista que se muestra en el mismo panel de los intentos pendientes de revisión
+     * @param evt 
+     */
     private void btnGetAttemptsPendingReviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGetAttemptsPendingReviewActionPerformed
         pnlPendingReviewsUsers.setViewportView(lstAttemptsPendingReview);
         ArrayList<Intent> intents = da.getAttemptsPendingReview();
@@ -373,6 +379,10 @@ public class InstructorView extends javax.swing.JFrame {
         lstAttemptsPendingReview.setModel(dfmu);
     }//GEN-LAST:event_btnGetAttemptsPendingReviewActionPerformed
 
+    /**
+     * Permite obtener una lista que se muestra en el mismo panel de los usuarios
+     * @param evt 
+     */
     private void btnGetUsersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGetUsersActionPerformed
         pnlPendingReviewsUsers.setViewportView(lstUsuaris);
         ArrayList<Usuari> usuaris = da.getAllUsers();
@@ -384,8 +394,12 @@ public class InstructorView extends javax.swing.JFrame {
         lstUsuaris.setModel(dfmu);
     }//GEN-LAST:event_btnGetUsersActionPerformed
 
-    //Este método servía para cargar manualmente el video asociado al intento seleccionado
-    //Ahora se reproduce automáticamente, pero he decidido dejarlo.
+    /**
+     * Este método servía para cargar manualmente el video asociado al intento seleccionado
+       Ahora se reproduce automáticamente, pero he decidido dejarlo.
+     * @param evt
+     * @deprecated 
+     */
     private void btnLoadFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoadFileActionPerformed
 //        pnlPendingReviewsUsers.setViewportView(lstVideos);
 //        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
@@ -540,7 +554,11 @@ public class InstructorView extends javax.swing.JFrame {
         btnPauseResumeVideo.setIcon(new ImageIcon(getClass().getResource("/icons/pause.png")));
     }
 
-    //Método de prueba mientras probaba el funcionamiento del vlc
+    /**
+     * Método de prueba mientras probaba el funcionamiento del vlc
+     * @param evt 
+     * @deprecated 
+     */
     private void lstVideosValueChanged(javax.swing.event.ListSelectionEvent evt) {
 //        if (evt.getValueIsAdjusting()) {
 //            return;
@@ -553,7 +571,10 @@ public class InstructorView extends javax.swing.JFrame {
 
     }
 
-    //Método que comprueba si existe o no una review para mostrar los botones correspondientes
+    /**
+     * Método que comprueba si existe o no una review para mostrar los botones correspondientes
+     * @param intent 
+     */
     private void checkReview(Intent intent) {
         Review review = da.getAttemptReview(intent.getId());
         if (review.getId() == 0) {

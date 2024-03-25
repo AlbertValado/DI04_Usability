@@ -16,6 +16,9 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 /**
+ * Clase desde la que se inicializa el programa
+ * Permite hacer log y acceder a la vista de Instructor
+ * COntiene el logo de la aplicación 
  *
  * @author Albert
  */
