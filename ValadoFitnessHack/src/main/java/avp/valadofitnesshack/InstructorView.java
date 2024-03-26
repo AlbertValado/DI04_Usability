@@ -426,7 +426,10 @@ public class InstructorView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLoadFileActionPerformed
 
     //Métodos de botones:
-    //Pausar/Reanudar
+    /**
+     * Permite pausar y reanudar la reproducción de un video
+     * @param evt 
+     */
     private void btnPauseResumeVideoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPauseResumeVideoActionPerformed
         if (isPlaying) {
             mediaPlayer.mediaPlayer().controls().pause();
@@ -441,7 +444,10 @@ public class InstructorView extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnPauseResumeVideoActionPerformed
 
-    //Revisar un intento
+    /**
+     * Abre un nuevo diálogo reviewDialog para realizar la review de un intento
+     * @param evt 
+     */
     private void btnReviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReviewActionPerformed
         isReview = true;
         ReviewDialog reviewDialog = new ReviewDialog(this, true);
@@ -451,12 +457,19 @@ public class InstructorView extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnReviewActionPerformed
 
-    //Borrar un intento
+    /**
+     * Permite borrar una review de un intento
+     * @param evt 
+     */
     private void btnDeleteReviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteReviewActionPerformed
         da.deleteReview(selectedIntent);
         checkReview(selectedIntent);
     }//GEN-LAST:event_btnDeleteReviewActionPerformed
 
+    /**
+     * Abre un nuevo diálogo reviewDialog para editar un intento existente
+     * @param evt 
+     */
     //Editar un intento
     private void btnEditReviewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditReviewActionPerformed
         isReview = false;
@@ -490,8 +503,11 @@ public class InstructorView extends javax.swing.JFrame {
                 + "Logo de la aplicación por gentileza de Tófol Martínez Lorenzo");
     }//GEN-LAST:event_itmAboutActionPerformed
 
-    //Métodos para ejecutar las distintas tareas al seleccionar un valor de una lista
-    //Mostrar la información, reproducir vídeos, etc...
+    /**
+     * Método para mostrar información al seleccionar un valor de una lista
+     * @param evt 
+     */
+    
     private void lstAttemptsPendingReviewValueChanged(javax.swing.event.ListSelectionEvent evt) {
         if (evt.getValueIsAdjusting()) {
             return;
@@ -521,6 +537,10 @@ public class InstructorView extends javax.swing.JFrame {
 
     }
 
+    /**
+     * Método para mostrar los usuarios en una lista
+     * @param evt 
+     */
     private void lstUsuarisValueChanged(javax.swing.event.ListSelectionEvent evt) {
         if (evt.getValueIsAdjusting()) {
             return;
@@ -538,6 +558,10 @@ public class InstructorView extends javax.swing.JFrame {
         lstAttemptsPerUser.setModel(dfmu);
     }
 
+    /**
+     * Método para mostrar los intentos por usuario en una lista
+     * @param evt 
+     */
     private void lstAttemptsPerUserValueChanged(javax.swing.event.ListSelectionEvent evt) {
         if (evt.getValueIsAdjusting()) {
             return;

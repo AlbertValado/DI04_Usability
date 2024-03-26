@@ -5,7 +5,7 @@
 package avp.valadofitnesshack.dto;
 
 /**
- *
+ * Cada uno de los objetos de esta clase representa la review de un intento
  * @author Albert
  */
 public class Review {

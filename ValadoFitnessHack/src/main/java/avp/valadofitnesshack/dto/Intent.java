@@ -5,7 +5,7 @@
 package avp.valadofitnesshack.dto;
 
 /**
- *
+ * Los objetos de esta clase representan cada uno de los intentos de un usuario para un ejercicio determinado.
  * @author Albert
  */
 public class Intent {

@@ -12,7 +12,8 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
- *
+ * Crea un cuadro de diálogo para realizar el login.
+ * 
  * @author Albert
  */
 public class LoginDialog extends javax.swing.JDialog {

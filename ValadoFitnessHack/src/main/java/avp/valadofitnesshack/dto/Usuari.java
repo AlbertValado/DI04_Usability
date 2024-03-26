@@ -2,7 +2,8 @@
 package avp.valadofitnesshack.dto;
 
 /**
- *
+ * Los objetos de esta clase representan cada uno de los usuarios de la aplicación
+ * y si son instructores o no. 
  * @author Albert
  */
 public class Usuari {
